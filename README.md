@@ -8,6 +8,7 @@ when I started, I thought it will not take much time to rice my system so I didn
 ---
 ### requirement
 - awesome v4.3-895-g538586c17-dirty
+- https://github.com/kikito/inspect.lua
 
 
 ---
