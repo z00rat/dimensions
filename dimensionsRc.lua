@@ -21,7 +21,9 @@ hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+xresources = require("beautiful.xresources")
+apply_dpi = xresources.apply_dpi
+xrdb = xresources.get_current_theme()
 
-
-local theme = require("theme")
+theme = require("theme")
 beautiful.init(theme)

@@ -1,34 +1,23 @@
 -- https://awesomewm.org/apidoc/documentation/06-appearance.md.html
 
--- Standard awesome library
-local gears = require("gears")
-local awful = require("awful")
-local xresources = require("beautiful.xresources")
-local apply_dpi   = xresources.apply_dpi
-local xrdb = xresources.get_current_theme()
-
 --my color
 --https://lospec.com/palette-list/1bit-monitor-glow
 local onebit_monitor_glow_black = "#222323"
 local onebit_monitor_glow_white = "#f0f6f0"
---https://lospec.com/palette-list/christmas-time
-
 
 awful.util.shell = "/bin/bash"
-
 
 local theme = {}
 
 
-
 -- mine variables
-theme.userdir   = ("/home/"..os.getenv("USER").."/") or "/home/hz/"
-theme.configdir = theme.userdir..".config/awesome/"
+theme.userdir   = ("/home/"..os.getenv("USER").."/")
+theme.dimensionsDir = theme.userdir..".config/awesome/dimensions/"
 theme.terminal  = "alacritty"
 -- theme.browser  = "Firefox"
 theme.editor    = os.getenv("EDITOR") or "nano"
 -- theme.hostname  = "arch-linux"
-theme.username  = os.getenv("USERNAME") or "NO_USER"
+theme.username  = os.getenv("USERNAME") or "NO_USERNAME"
 theme.apply_dpi = apply_dpi
 
 theme.modkey    = "Mod4"
@@ -43,8 +32,8 @@ theme.font_size = 7 --9
 theme.default_layout = awful.layout.suit.tile
 
 
-theme.distro_pic = (theme.configdir.."icons/archlinux.png")
--- theme.distro_pic = (theme.configdir.."icons/manjaro.png")
+theme.distro_pic = (theme.dimensionsDir.."icons/archlinux.png")
+-- theme.distro_pic = (theme.dimensionsDir.."icons/manjaro.png")
 
 -- theme.clock_font = "Hack Bold 30"
 -- theme.clock_font = "Pixel LCD7 60"
@@ -126,7 +115,7 @@ theme.fg_focus = theme.bright_white
 -- theme.fg_minimize = nil
 theme.border_width = apply_dpi(2)
 theme.border_color = theme.bright_green
-theme.wallpaper = (theme.userdir.."Pictures/wallpaper/view.png")
+theme.wallpaper = (theme.dimensionsDir.."wallpapers/keyboards.jpg")
 theme.bg_systray = theme.fg_normal
 -- theme.border_color_marked = nil
 -- theme.border_color_floating = nil
@@ -195,8 +184,8 @@ theme.wallpapers.ten = ""
 
 
 -- awesome
--- theme.awesome_icon = (theme.userdir..".config/awesome/icons/awesomewm_black.png")
-theme.awesome_icon = (theme.configdir.."icons/awesomewmw.png")
+-- theme.awesome_icon = (theme.dimensionsDir.."icons/awesomewm_black.png")
+theme.awesome_icon = (theme.dimensionsDir.."icons/awesomewmw.png")
 
 
 
@@ -278,22 +267,22 @@ theme.icon_theme = "/usr/share/icons/Papirus"
 
 
 -- layout
-theme.layout_cornernw   = theme.configdir.."icons/cornernw.png"
-theme.layout_cornerne   = theme.configdir.."icons/cornerne.png"
-theme.layout_cornersw   = theme.configdir.."icons/cornersw.png"
-theme.layout_cornerse   = theme.configdir.."icons/cornerse.png"
-theme.layout_fairh      = theme.configdir.."icons/fairh.png"
-theme.layout_fairv      = theme.configdir.."icons/fairv.png"
-theme.layout_floating   = theme.configdir.."icons/floating.png"
-theme.layout_magnifier  = theme.configdir.."icons/magnifier.png"
-theme.layout_max        = theme.configdir.."icons/max.png"
-theme.layout_fullscreen = theme.configdir.."icons/fullscreen.png"
-theme.layout_spiral     = theme.configdir.."icons/spiral.png"
-theme.layout_dwindle    = theme.configdir.."icons/dwindle.png"
-theme.layout_tile       = theme.configdir.."icons/tile.png"
-theme.layout_tiletop    = theme.configdir.."icons/tiletop.png"
-theme.layout_tilebottom = theme.configdir.."icons/tilebottom.png"
-theme.layout_tileleft   = theme.configdir.."icons/tileleft.png"
+theme.layout_cornernw   = theme.dimensionsDir.."icons/cornernw.png"
+theme.layout_cornerne   = theme.dimensionsDir.."icons/cornerne.png"
+theme.layout_cornersw   = theme.dimensionsDir.."icons/cornersw.png"
+theme.layout_cornerse   = theme.dimensionsDir.."icons/cornerse.png"
+theme.layout_fairh      = theme.dimensionsDir.."icons/fairh.png"
+theme.layout_fairv      = theme.dimensionsDir.."icons/fairv.png"
+theme.layout_floating   = theme.dimensionsDir.."icons/floating.png"
+theme.layout_magnifier  = theme.dimensionsDir.."icons/magnifier.png"
+theme.layout_max        = theme.dimensionsDir.."icons/max.png"
+theme.layout_fullscreen = theme.dimensionsDir.."icons/fullscreen.png"
+theme.layout_spiral     = theme.dimensionsDir.."icons/spiral.png"
+theme.layout_dwindle    = theme.dimensionsDir.."icons/dwindle.png"
+theme.layout_tile       = theme.dimensionsDir.."icons/tile.png"
+theme.layout_tiletop    = theme.dimensionsDir.."icons/tiletop.png"
+theme.layout_tilebottom = theme.dimensionsDir.."icons/tilebottom.png"
+theme.layout_tileleft   = theme.dimensionsDir.."icons/tileleft.png"
 
 
 
@@ -699,25 +688,10 @@ theme.tooltip_shape = gears.shape.rect
 -- theme.wibar_shape = nil
 
 
-
-
 theme.switch = {}
 theme.switch.tag_n_layout_normal_bg = theme.normal_yellow
 theme.switch.tag_n_layout_focused_bg = theme.normal_green
 theme.switch.tag_n_layout_selected_bg = theme.normal_cyan
 
 
-
-
-
-
-
-
-
-
-
-
-
 return theme
-
--- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
