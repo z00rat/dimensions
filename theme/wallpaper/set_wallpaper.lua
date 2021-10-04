@@ -1,3 +1,8 @@
+-- Standard awesome library
+local awful = require("awful")
+-- Theme handling library
+local beautiful = require("beautiful")
+
 -- this script will provide wallpaper when awesomewm ask for it
 
 screen.connect_signal(

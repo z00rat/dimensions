@@ -1,3 +1,14 @@
+-- Standard awesome library
+local gears = require("gears")
+local awful = require("awful")
+-- Theme handling library
+local beautiful = require("beautiful")
+
+local xresources = require("beautiful.xresources")
+local apply_dpi = xresources.apply_dpi
+local xrdb = xresources.get_current_theme()
+
+
 -- https://awesomewm.org/apidoc/documentation/06-appearance.md.html
 
 --my color
@@ -11,7 +22,8 @@ local theme = {}
 
 -- mine variables
 theme.userdir = ("/home/" .. os.getenv("USER") .. "/")
-theme.dimensionsDir = theme.userdir .. ".config/awesome/dimensions/"
+-- theme.dimensionsDir = theme.userdir .. ".config/awesome/dimensions/"
+theme.dimensionsDir = "/home/zoorat/Documents/z00rat/dimensions/"
 theme.terminal = "alacritty"
 -- theme.browser  = "Firefox"
 theme.editor = os.getenv("EDITOR") or "nano"

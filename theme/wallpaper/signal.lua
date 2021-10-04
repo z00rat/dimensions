@@ -1,9 +1,11 @@
+-- Standard awesome library
+local gears = require("gears")
+
 -- those signals will set wallpaper in different method
 
 screen.connect_signal(
     "wallpaper::onecolor",
     function(color)
-        print("ajfdaufjasfujalkfaj")
         gears.wallpaper.set(color, s, true)
     end
 )
