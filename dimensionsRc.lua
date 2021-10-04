@@ -28,8 +28,8 @@ xrdb = xresources.get_current_theme()
 theme = require("theme")
 beautiful.init(theme)
 
--- require all signal scripts first 
+-- require all signal scripts first
 require("theme.wallpaper.signal")
 
--- require other files 
+-- require other files
 require("theme.wallpaper.set_wallpaper")
